@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	--element-color: #B0A8B9;
+	--content-background-color: #210F3D;
+	--light-background-color: #3C0300;
+}
+
+body {
+    margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 2fr 6fr 2fr;
+}
+
+.sideSectionLeft {
+	background-image: linear-gradient(to right, var(--light-background-color), var(--content-background-color));
+}
+
+.sideSectionRight {
+	background-image: linear-gradient(to right, var(--content-background-color), var(--light-background-color));
+}
+
+.middleSection {
+	background-color: var(--content-background-color);
+}
+
+header {
+	color: var(--element-color);
+	display: table;
+	margin: 40px auto;
+}
+
+.instruction {
+	color: var(--element-color);
+	display: table;
+	margin: 20px auto;
+	text-align: center;
+}
+
+button {
+	background-color: var(--element-color);
+	color: var(--background-color);
+	font-weight: bold;
+	border: 1px solid var(--element-color);
+	cursor: pointer;
+	padding: 20px;
+	text-align: center;
+	margin: 20px;
+	outline: none;
+}
+
+button:hover {
+	color: var(--element-color);
+	background-color: var(--content-background-color);
+	border: 1px solid var(--element-color);
+	transition-duration: 0.5s;
+}
+
+button:active {
+	box-shadow: inset 0 1px 3px white;
+}
+
+#buttons {
+	display: table;
+	margin: auto;
+}
+
+#board div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--content-background-color);
+    background-color: var(--element-color);
+    float: left;
+}
+
+#board div.life {
+    background-color: var(--background-color);
+}
+
+#board {
+    margin: 50px auto 0;
+    min-height: 100px;
+    min-width: 100px
+}
