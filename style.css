@@ -15,6 +15,7 @@ body {
 }
 
 .container {
+	height: 100vh;
 	display: grid;
 	grid-template-columns: 2fr 6fr 2fr;
 }
@@ -81,7 +82,15 @@ button:active {
 }
 
 #board div.life {
-    background-color: var(--background-color);
+	background-color: var(--content-background-color);
+	animation-name: scaleLife;
+	animation-duration: .5s;
+}
+
+@keyframes scaleLife {
+	from {background-color: var(--light-background-color);}
+	to {background-color: var(--content-background-color);}
+
 }
 
 #board {
