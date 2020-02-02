@@ -1,4 +1,4 @@
-# The-Game-of-Life
+# The Game of Life
 
 Aplikacja stowarzona na podstawie ['The game of life'](https://pl.wikipedia.org/wiki/Gra_w_%C5%BCycie#Regu%C5%82y_gry_wed%C5%82ug_Conwaya) Johna Conwaya stanowiącej przykład automatu komókowego.
 

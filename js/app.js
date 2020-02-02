@@ -17,8 +17,6 @@ class GameOfLife {
 			this.changeInterval();
 		}
 	
-	// const _this = this;
-
 	// tworzenie planszy z polami w zależności od podanych wymiarów: boardWidth, boardHeight
 	createBoard() {
 		let boardWidth = this.width * 10;
@@ -78,7 +76,7 @@ class GameOfLife {
 	changeInterval() {
 		let _this = this;
 		this.playButton.addEventListener('click', () => {
-			_this.interval = setInterval((() => this.printNextGeneration()), 1000);
+			_this.interval = setInterval((() => this.printNextGeneration()), 300);
 			}
 		);
 		this.pauseButton.addEventListener('click', () => {
@@ -89,4 +87,5 @@ class GameOfLife {
 
 
 const game = new GameOfLife(50, 50);
-module.exports = game;
+module.exports = { game };
+module.exports =  GameOfLife;

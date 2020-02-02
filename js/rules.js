@@ -5,17 +5,20 @@ class Rules {
 	}
 
 	// funkcja zwraca indeks pola w tablicy na podstawie współrzędnych x i y
+	getIndex(x,y) {
+		return x + y * this.width
+	}
+
 	cellIndex(x,y) {
-		const index = x + y * this.width
-		return this.cells[index];
+		return this.cells[this.getIndex(x,y)];
 	}
 
 	// nadawanie elementom klasy w zależności od otrzymanego statusu
 	setCellState(x,y) {
-		if (!this.cellIndex(x,y).classList.contains('life') === 'life') {
-			cellIndex(x,y).classList.add('life');
+		if (this.cellIndex(x,y).classList.contains('life')) {
+			this.cellIndex(x,y).classList.remove('life');
 		} else {
-			cellIndex(x,y).classList.remove('life');
+			this.cellIndex(x,y).classList.add('life');
 		}
 	}
 
@@ -57,7 +60,7 @@ class Rules {
 		// w zależności od countera określany jest kolejny stan pola. Jeżeli pole ma żyć to funkcja zwraca 1, a jeżeli ma umrzeć to 0
 		if(this.cellIndex(x, y).classList.contains('life') && counter < 2) { 
 			return 0;
-		} else if (this.cellIndex(x, y).classList.contains('life') && counter === 2 || counter === 3) {
+		} else if ((this.cellIndex(x, y).classList.contains('life')) && (counter === 2 || counter === 3)) {
 			return 1;
 		} else if (this.cellIndex(x, y).classList.contains('life') && counter > 3) {
 			return 0;
