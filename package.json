@@ -5,7 +5,8 @@
   "main": "./js/app.js",
   "scripts": {
     "test:mocha": "mocha || true",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
